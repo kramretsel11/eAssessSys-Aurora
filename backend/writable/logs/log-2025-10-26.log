@@ -1,0 +1,311 @@
+ERROR - 2025-10-26 10:50:20 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'eassessment_db', 3306, '', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-10-26 10:50:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'eassessment_db'
+[Method: POST, Route: e_assessment/api/v1/auth/login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblusers`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-26 10:52:42 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'eassessment_db', 3306, '', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-10-26 10:52:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'eassessment_db'
+[Method: POST, Route: e_assessment/api/v1/auth/login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblusers`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-26 10:53:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'eassessment_db', 3306, '', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-10-26 10:53:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'eassessment_db'
+[Method: POST, Route: e_assessment/api/v1/auth/login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblusers`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-26 10:53:30 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'eassessment_db', 3306, '', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-10-26 10:53:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'eassessment_db'
+[Method: POST, Route: e_assessment/api/v1/auth/login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblusers`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-26 10:53:48 --> ErrorException: Undefined property: stdClass::$username
+[Method: POST, Route: e_assessment/api/v1/auth/login]
+in APPPATH\Controllers\Auth.php on line 63.
+ 1 APPPATH\Controllers\Auth.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$username', 'C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\app\\Controllers\\Auth.php', 63)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-26 10:54:26 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'eassessment_db', 3306, '', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-10-26 10:54:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'eassessment_db'
+[Method: POST, Route: e_assessment/api/v1/auth/login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblusers`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-26 10:55:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'eassessment_db', 3306, '', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'eassessment_db' in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', Array)
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-10-26 10:55:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'eassessment_db'
+[Method: POST, Route: e_assessment/api/v1/auth/login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblusers`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 SYSTEMPATH\Model.php(925): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Auth.php(63): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
