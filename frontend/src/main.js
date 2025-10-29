@@ -21,9 +21,11 @@ import router from "./router";
 import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
 import SoftUIDashboard from "./soft-ui-dashboard";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
 
 const baseURL = process.env.NODE_ENV === 'development' ? 
-'http://localhost:8080/e_assessment/api/v1' : 
+'http://localhost:8080' : 
 ''
 
 const api = axios.create({ baseURL })

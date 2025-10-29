@@ -7,6 +7,10 @@ import Profile from "@/views/Profile.vue";
 import Rtl from "@/views/Rtl.vue";
 import SignIn from "@/views/SignIn.vue";
 import SignUp from "@/views/SignUp.vue";
+import Settings from "@/views/Settings.vue";
+import Requests from "@/views/Requests.vue";
+import Recommend from "@/views/Recommend.vue";
+import Approval from "@/views/Approval.vue";
 
 const routes = [
   {
@@ -53,6 +57,26 @@ const routes = [
     path: "/sign-up",
     name: "Sign Up",
     component: SignUp,
+  },
+  {
+    path: "/settings",
+    name: "Settings",
+    component: Settings,
+  },
+  {
+    path: "/requests",
+    name: "Requests",
+    component: Requests,
+  },
+  {
+    path: "/recommend",
+    name: "Recommend",
+    component: Recommend,
+  },
+  {
+    path: "/approval",
+    name: "Approval",
+    component: Approval,
   },
   {
     path: "/track-reference",

@@ -131,7 +131,7 @@ export default {
     async handleSubmit(e) {
       e.preventDefault();
       console.log("Form data: ", this.form);
-			this.$api.post("auth/login", this.form).then((res) => {
+			this.$api.post("/e_assessment/api/v1/auth/login", this.form).then((res) => {
 				let response = {...res.data}
         console.log("Login response: ", response)
 				if(!response.error){

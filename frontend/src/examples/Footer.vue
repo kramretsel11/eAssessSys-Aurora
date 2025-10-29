@@ -14,9 +14,9 @@
               href="https://www.creative-tim.com"
               class="font-weight-bold"
               target="_blank"
-              >Creative Tim</a
+              >E-ASSESS SYSTEM TEAM</a
             >
-            for a better web.
+            for a better solution experience.
           </div>
         </div>
         <!-- <div class="col-lg-6">

@@ -12,6 +12,20 @@
             </template>
           </sidenav-collapse>
         </li>
+        <li class="nav-item">
+          <sidenav-collapse navText="Requests" :to="{ name: 'Requests' }">
+            <template #icon>
+              <shop />
+            </template>
+          </sidenav-collapse>
+        </li>
+        <li class="nav-item">
+          <sidenav-collapse navText="Settings" :to="{ name: 'Settings' }">
+            <template #icon>
+              <settings />
+            </template>
+          </sidenav-collapse>
+        </li>
       </ul>
     </div>
     <div class="pt-3 mx-3 mt-3 sidenav-footer">
@@ -30,6 +44,7 @@
 import SidenavCollapse from "./SidenavCollapse.vue";
 import SidenavCard from "./SidenavCard.vue";
 import Shop from "../../components/Icon/Shop.vue";
+import Settings from "../../components/Icon/Settings.vue";
 
 export default {
   name: "SidenavList",
@@ -46,7 +61,8 @@ export default {
   components: {
     SidenavCollapse,
     SidenavCard,
-    Shop
+    Shop,
+    Settings
   },
   methods: {
     getRoute() {

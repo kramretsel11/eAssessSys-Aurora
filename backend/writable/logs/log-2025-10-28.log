@@ -1,0 +1,1834 @@
+ERROR - 2025-10-28 22:00:18 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/categories]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:18 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:00:18 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmark...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmark...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmark...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmark...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/market-values]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:18 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:00:18 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblasse...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblasse...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblasse...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblasse...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/assessment-levels]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:18 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:00:49 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/categories]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:49 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:00:49 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmark...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmark...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmark...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmark...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/market-values]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:49 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:00:49 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblasse...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblasse...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblasse...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblasse...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/assessment-levels]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:49 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:00:52 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/categories]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:52 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:00:52 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmark...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmark...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmark...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmark...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/market-values]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:52 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:00:52 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblasse...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblasse...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblasse...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblasse...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:00:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/assessment-levels]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:00:52 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:21 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/categories]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:21 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:21 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmark...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmark...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmark...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmark...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/market-values]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:21 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:21 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblasse...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblasse...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblasse...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblasse...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/assessment-levels]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:21 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:30 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/categories]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:30 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:30 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmark...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmark...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmark...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmark...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/market-values]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:30 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:30 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblasse...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblasse...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblasse...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblasse...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/assessment-levels]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:30 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:51 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/categories]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:51 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:51 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmark...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmark...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmark...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmark...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/market-values]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:51 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:51 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblasse...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblasse...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblasse...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblasse...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/assessment-levels]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:51 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:55 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/categories]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:55 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tblcategory`
+WHERE `tblcategory`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\CategoryModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\CategoryController.php(19): App\Models\CategoryModel->getCategories()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->getCategories()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:55 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmark...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmark...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmark...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmark...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/market-values]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:55 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblmarket_values`.*, `tblcategory`.`name` as `category_name`
+FROM `tblmarket_values`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblmarket_values`.`categoryId`
+WHERE `tblmarket_values`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\MarketValueModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\MarketValueController.php(19): App\Models\MarketValueModel->getMarketValues()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->getMarketValues()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+ERROR - 2025-10-28 22:07:56 --> mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist in C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblasse...', 0)
+#1 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblasse...')
+#2 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblasse...')
+#3 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblasse...', Array, false)
+#4 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\Thesis\2025\ascot-realestate\backend\app\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+#8 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+#9 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+#10 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\Thesis\2025\ascot-realestate\backend\public\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\Thesis\2025\ascot-realestate\backend\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-10-28 22:07:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+[Method: GET, Route: e_assessment/api/v1/misc/assessment-levels]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-28 22:07:56 --> [Caused by] mysqli_sql_exception: Table 'easessment_db.tblcategory' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tblassessment_levels`.*, `tblcategory`.`name` as `category_name`
+FROM `tblassessment_levels`
+JOIN `tblcategory` ON `tblcategory`.`id` = `tblassessment_levels`.`categoryId`
+WHERE `tblassessment_levels`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\AssessmentLevelModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\AssessmentLevelController.php(19): App\Models\AssessmentLevelModel->getAssessmentLevels()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AssessmentLevelController->getAssessmentLevels()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AssessmentLevelController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')

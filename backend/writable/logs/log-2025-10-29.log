@@ -1,0 +1,33 @@
+CRITICAL - 2025-10-29 00:50:16 --> ErrorException: Undefined property: stdClass::$id
+[Method: POST, Route: e_assessment/api/v1/misc/categories/update]
+in APPPATH\Controllers\CategoryController.php on line 47.
+ 1 APPPATH\Controllers\CategoryController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\app\\Controllers\\CategoryController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->updateCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-29 00:52:49 --> ErrorException: Undefined property: stdClass::$id
+[Method: POST, Route: e_assessment/api/v1/misc/categories/update]
+in APPPATH\Controllers\CategoryController.php on line 76.
+ 1 APPPATH\Controllers\CategoryController.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\app\\Controllers\\CategoryController.php', 76)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CategoryController->updateCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
+CRITICAL - 2025-10-29 00:58:43 --> ErrorException: Undefined property: stdClass::$id
+[Method: POST, Route: e_assessment/api/v1/misc/market-values/update]
+in APPPATH\Controllers\MarketValueController.php on line 51.
+ 1 APPPATH\Controllers\MarketValueController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id', 'C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\app\\Controllers\\MarketValueController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MarketValueController->updateMarketValue()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MarketValueController))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(72): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\Thesis\\2025\\ascot-realestate\\backend\\public\\index.php')
