@@ -402,26 +402,94 @@ export default {
 
         async backupDatabase() {
             try {
-                await this.$api.post('/e_assessment/api/v1/misc/database/backup');
-                Swal.fire('Success', 'Database backup created successfully', 'success');
+                // Ask for password confirmation
+                const { value: password } = await Swal.fire({
+                    title: 'Enter Your Password',
+                    input: 'password',
+                    inputLabel: 'Password',
+                    inputPlaceholder: 'Enter your password',
+                    showCancelButton: true,
+                    inputValidator: (value) => {
+                        if (!value) {
+                            return 'Password is required!'
+                        }
+                    }
+                });
+
+                if (password) {
+                    // Send password and userId for verification and get the response as blob
+                    const response = await this.$api.post('/e_assessment/api/v1/misc/database/backup', 
+                        {
+                            password: password,
+                            userId: this.user.userId
+                        },
+                        { 
+                            responseType: 'blob' // Important: tells axios to handle the response as a binary blob
+                        }
+                    );
+
+                    // Create a blob from the response data
+                    const blob = new Blob([response.data], { type: 'application/sql' });
+                    
+                    // Create a temporary URL for the blob
+                    const url = window.URL.createObjectURL(blob);
+                    
+                    // Create a temporary link element
+                    const link = document.createElement('a');
+                    link.href = url;
+                    
+                    // Get current date for filename
+                    const date = new Date().toISOString().slice(0, 10);
+                    link.download = `ascot_db_backup_${date}.sql`; // Set the download filename
+                    
+                    // Append the link to the document, click it, and remove it
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
+                    // Clean up the temporary URL
+                    window.URL.revokeObjectURL(url);
+                    
+                    Swal.fire('Success', 'Database backup downloaded successfully', 'success');
+                }
             } catch (error) {
                 console.error('Backup error:', error);
-                Swal.fire('Error', 'Failed to backup database', 'error');
+                const errorMessage = error.response?.data?.message || 'Failed to backup database';
+                Swal.fire('Error', errorMessage, 'error');
             }
         },
 
         async restoreDatabase() {
             if (!this.selectedFile) return;
 
-            const formData = new FormData();
-            formData.append('file', this.selectedFile);
-
             try {
-                await this.$api.post('/e_assessment/api/v1/misc/database/restore', formData);
-                Swal.fire('Success', 'Database restored successfully', 'success');
+                // Ask for password confirmation
+                const { value: password } = await Swal.fire({
+                    title: 'Enter Your Password',
+                    input: 'password',
+                    inputLabel: 'Password',
+                    inputPlaceholder: 'Enter your password',
+                    showCancelButton: true,
+                    inputValidator: (value) => {
+                        if (!value) {
+                            return 'Password is required!'
+                        }
+                    }
+                });
+
+                if (password) {
+                    const formData = new FormData();
+                    formData.append('backup_file', this.selectedFile);
+                    formData.append('password', password);
+                    formData.append('userId', this.user.userId);
+
+                    await this.$api.post('/e_assessment/api/v1/misc/database/restore', formData);
+                    Swal.fire('Success', 'Database restored successfully', 'success');
+                }
             } catch (error) {
                 console.error('Restore error:', error);
-                Swal.fire('Error', 'Failed to restore database', 'error');
+                const errorMessage = error.response?.data?.message || 'Failed to restore database';
+                Swal.fire('Error', errorMessage, 'error');
             }
         },
 
