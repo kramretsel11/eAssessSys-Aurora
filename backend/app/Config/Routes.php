@@ -51,5 +51,6 @@ $routes->group('e_assessment/api/v1', function($routes){
 		$routes->post('assessment-requests/create', 'AssessmentRequestController::createRequest');
 		$routes->post('assessment-requests/update', 'AssessmentRequestController::updateRequest');
 		$routes->post('assessment-requests/update-status', 'AssessmentRequestController::updateRequestStatus');
+		$routes->post('assessment-requests/track', 'AssessmentRequestController::trackRequest');
 	});
 });

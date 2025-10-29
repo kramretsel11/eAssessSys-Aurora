@@ -117,4 +117,55 @@ class AssessmentRequestController extends ResourceController
         $this->model->update($id, $payload);
         return $this->respond(['status' => 200, 'message' => 'Request status updated']);
     }
+
+    // Track assessment request by tracking number, id, arpNo or ownerName
+    public function trackRequest()
+    {
+        $req = json_decode($this->request->getBody());
+
+        $tracking = $req->tracking ?? null;
+        $arpNo = $req->arpNo ?? null;
+        $ownerName = $req->ownerName ?? null;
+
+        if (!$tracking && !$arpNo && !$ownerName) {
+            return $this->respond(['status' => 400, 'message' => 'Provide tracking, arpNo or ownerName']);
+        }
+
+        $row = null;
+
+        // Priority: tracking (exact match on tracking_number or id)
+        if ($tracking) {
+            $row = $this->model->where('tracking_number', $tracking)->first();
+            if (!$row && is_numeric($tracking)) {
+                $row = $this->model->find($tracking);
+            }
+        }
+
+        // Next: search by ARP number (exact)
+        if (!$row && $arpNo) {
+            $row = $this->model->where('arpNo', $arpNo)->first();
+        }
+
+        // Next: search by owner name (partial match)
+        if (!$row && $ownerName) {
+            $row = $this->model->like('ownerName', $ownerName)->first();
+        }
+
+        if (!$row) {
+            return $this->respond(['status' => 404, 'message' => 'Assessment request not found']);
+        }
+
+        // Decode JSON fields for client convenience
+        $jsonFields = ['generalDescription','structuralChecklist','additionalItems','propertyAppraisal','propertyBounderies','landAppraisal','otherImprovements','propertyAssessment','requestStatus'];
+        foreach ($jsonFields as $f) {
+            if (isset($row[$f]) && is_string($row[$f])) {
+                $decoded = json_decode($row[$f], true);
+                if (json_last_error() === JSON_ERROR_NONE) {
+                    $row[$f] = $decoded;
+                }
+            }
+        }
+
+        return $this->respond(['status' => 200, 'data' => $row]);
+    }
 }

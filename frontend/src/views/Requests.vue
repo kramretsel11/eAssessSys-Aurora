@@ -463,7 +463,6 @@ export default {
       step: 1,
       editing: false,
       form: {
-        id: null,
         arpNo: '',
         pin: '',
         categoryId: '',
@@ -569,7 +568,6 @@ export default {
     },
     resetForm() {
       this.form = {
-        id: null,
         arpNo: '',
         pin: '',
         categoryId: '',

@@ -11,6 +11,7 @@ import Settings from "@/views/Settings.vue";
 import Requests from "@/views/Requests.vue";
 import Recommend from "@/views/Recommend.vue";
 import Approval from "@/views/Approval.vue";
+import Track from "@/views/Track.vue";
 
 const routes = [
   {
@@ -57,6 +58,11 @@ const routes = [
     path: "/sign-up",
     name: "Sign Up",
     component: SignUp,
+  },
+  {
+    path: "/track",
+    name: "Track Request",
+    component: Track,
   },
   {
     path: "/settings",
